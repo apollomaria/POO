@@ -1,0 +1,5 @@
+Mpsayl v jhuhs CLYTLSOV kh pthnlt ybpkv.itw. Ptwhy = Wylav, Why = Iyhujv
+
+// texto na pista_01: Q2hhdmVfQ2VzYXI6IDcgfCBBbHZvOiBtZW5zYWdlbS50eHQ=
+// RESULTADO: Chave_Cesar: 7 | Alvo: mensagem.txt
+// RESULTADO CESAR: filtre o canal vermelho da imagem ruido.bmp. impar = preto, par = branco

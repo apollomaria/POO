@@ -1,0 +1,17 @@
+# Arquivos compilados
+*.class
+
+# Pastas de IDEs
+.mtj.tmp/
+*.custom
+*.im
+*.iml
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+
+# Arquivos de SO
+.DS_Store
+Thumbs.db
