@@ -1,7 +1,11 @@
 package br.com.nexustech.main;
 
+import br.com.nexustech.exception.BanidoException;
 import br.com.nexustech.exception.NivelInsuficienteException;
 import br.com.nexustech.model.Masmorra;
+import br.com.nexustech.model.MatchMaker;
+import br.com.nexustech.model.ModoCasual;
+import br.com.nexustech.model.ModoRanqueado;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,6 +42,7 @@ public class Main {
         // EXERCÍCIO 4
         String jogador = null;
 
+        // dead code pedagógico ! 
         if (jogador != null) {
             System.out.println("Nome do Jogador: " + jogador);
         } else {
@@ -66,13 +71,27 @@ public class Main {
             Masmorra masmorra = new Masmorra();
             masmorra.entrar(20);
         } catch (NivelInsuficienteException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
+        }
+
+        // NÍVEL BOSS ---------------------------------------------------------------------------------
+        // EXERCÍCIO 14
+
+        try {
+            MatchMaker matchMaker = new MatchMaker();
+            ModoCasual modoCasual = new ModoCasual();
+            ModoRanqueado modoRanqueado = new ModoRanqueado();
+            matchMaker.encontrarSala(modoCasual, false);
+            matchMaker.encontrarSala(modoRanqueado, false);
+            matchMaker.encontrarSala(modoCasual, true);
+        } catch (BanidoException e) {
+            System.out.println(e.getMessage());
         }
 
 
 
-
     }
+
 
     // -------------------------------------------------------------------------------------------------------
 
@@ -82,7 +101,5 @@ public class Main {
     public static void conectarServidor() throws Exception {
         throw new Exception("Servidor caiu!");
     }
-
-
 
 }

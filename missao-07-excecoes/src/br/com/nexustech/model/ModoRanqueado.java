@@ -1,0 +1,13 @@
+// NÍVEL BOSS ---------------------------------------------------------------------------------
+// EXERCÍCIO 11
+
+package br.com.nexustech.model;
+
+public class ModoRanqueado implements ModoJogo {
+
+    @Override
+    public void buscarPartida() {
+        System.out.println("Buscando partida RANQUEADA!");
+    }
+
+}
