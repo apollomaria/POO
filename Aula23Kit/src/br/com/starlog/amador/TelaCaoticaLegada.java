@@ -61,7 +61,7 @@ public class TelaCaoticaLegada extends JFrame {
         // =========================================================================
         btnDespacharCifrado.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent ev) {
                 // 1. Coleta direta da tela
                 String remetente = txtRemetente.getText();
                 String msg = txtMensagem.getText();
@@ -105,8 +105,13 @@ public class TelaCaoticaLegada extends JFrame {
 
                 // 6. Persistência direta em memória acoplada na tela
                 // historicoDisparos.add(pacoteFinal);
-                areaLog.append(transmissaoController.processarTransmissao(remetente, msg, chaveStr) + "\n");
-                JOptionPane.showMessageDialog(null, "Transmissão efetuada com sucesso!");
+                try {
+                    areaLog.append(transmissaoController.processarTransmissao(remetente, msg, chaveStr) + "\n");
+                    JOptionPane.showMessageDialog(null, "Transmissão efetuada com sucesso!");
+                } catch (IllegalArgumentException | NullPointerException e) {
+                    JOptionPane.showMessageDialog(null, e.getMessage());
+                }
+
             }
         });
     }
